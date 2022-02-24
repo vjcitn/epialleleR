@@ -16,4 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: kalibera/ucrt3/actions/r-install@main
+      ## added vjc
+      - name: get knitr
+        run: |
+          Rscript -e "install.packages('knitr')"
+      ## back to orig
       - uses: kalibera/R-actions/pkg-check@master
