@@ -1,0 +1,19 @@
+on: [push, pull_request]
+
+name: R-CMD-Check
+
+jobs:
+  R-CMD-check:
+    runs-on: ${{ matrix.os }}
+
+    name: ${{ matrix.os }} check
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ['windows-2022']
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: kalibera/ucrt3/actions/r-install@main
+      - uses: kalibera/R-actions/pkg-check@master
