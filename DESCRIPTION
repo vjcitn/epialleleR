@@ -20,7 +20,7 @@ Description: Epialleles are specific DNA methylation patterns that are
 SystemRequirements: C++17, GNU make
 NeedsCompilation: yes
 Depends:
-  R (>= 4.1)
+  R (>= 4.1), knitr
 Imports:
   stats,
   methods,
@@ -39,7 +39,6 @@ LinkingTo:
   zlibbioc
 Suggests:
   RUnit,
-  knitr,
   rmarkdown,
   ggplot2,
   ggstance
