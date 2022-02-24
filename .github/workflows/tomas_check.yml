@@ -19,6 +19,6 @@ jobs:
       ## added vjc
       - name: get knitr
         run: |
-          Rscript -e "install.packages('knitr')"
+          Rscript -e "install.packages('knitr', repos=c(CRAN='https://cloud.r-project.org'))"
       ## back to orig
       - uses: kalibera/R-actions/pkg-check@master
